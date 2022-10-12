@@ -6,12 +6,12 @@ const QuestionItems = ({abbas}) => {
     const {correctAnswer, question, options} = abbas;
 
     const handleAns =(abbas)=>{
-        // if (abbas=== correctAnswer) {
-        //     toast.success('Correct Answer', {autoClose:1500})
-        // }
-        // else{
-        //     toast.warning('Wrong try Again!', {autoClose:1500})
-        // }
+        if (abbas=== correctAnswer) {
+            toast.success('Correct Answer', {autoClose:1500})
+        }
+        else{
+            toast.warning('Wrong try Again!', {autoClose:1500})
+        }
     }
     const handleCorAns =()=>{
         
