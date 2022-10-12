@@ -6,6 +6,8 @@ import Stastics from './Components/Stastistic/Stastics';
 import TopicDetail from './Components/TopicDeatil/TopicDetail';
 import Topics from './Components/Topics/Topics';
 import Main from './Layout/Main';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const router = createBrowserRouter([
@@ -38,6 +40,12 @@ function App() {
           loader: async({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`),
           element: <TopicDetail ></TopicDetail>
         }
+        ,
+        {
+          path:'/stastics',
+          loader: async()=> fetch(`https://openapi.programming-hero.com/api/quiz`),
+          element: <Stastics></Stastics>
+        }
       ]
     },
     {
@@ -50,6 +58,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+      <ToastContainer />
     </div>
   );
 }
