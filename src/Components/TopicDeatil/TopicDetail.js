@@ -7,8 +7,8 @@ const TopicDetail = () => {
     const {data} = quizes;
     const {name, questions} = data;
     return (
-        <div>
-            <p>{name}</p>
+        <div className='p-10'>
+            <p className='text-white'>{name}</p>
             {
                 questions.map(abbas=> <QuestionItems key={abbas.id} abbas={abbas}></QuestionItems>)
             }
