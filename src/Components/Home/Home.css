@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 930px) {
+    .res-class{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+@media screen and (max-width: 730px) {
+    .res-class{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+@media screen and (max-width: 630px) {
+    .res-class{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+  
